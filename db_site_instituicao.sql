@@ -35,6 +35,7 @@ CREATE TABLE `instituicao` (
   `telefone` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
   `login_id_login1` int(11) NOT NULL,
+  `logo` longblob NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_instituicao_login2_idx` (`login_id_login1`),
   CONSTRAINT `fk_instituicao_login2` FOREIGN KEY (`login_id_login1`) REFERENCES `login` (`id_login`) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -59,4 +60,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-07 13:42:38
+-- Dump completed on 2020-05-09 13:52:01
